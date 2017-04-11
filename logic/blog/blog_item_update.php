@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['title'], $_POST['cont
 		if ($save_error) {
 			$_SESSION['messages'][] = ['type' => 'danger', 'text' => $save_error];
 		}else{
-			header('Location: /kolyanphp/lesson13/blog/' . $post['id']);
+			header('Location: /kolyanphp/lesson13/blog' . $post['id']);
 			exit();
 		}
 	}

@@ -19,6 +19,9 @@ switch (TRUE) {
 	case preg_match('/\/blog\/(\w+)\/update$/', $_SERVER['REQUEST_URI'], $post_data):
 		require LGC_DIR . 'blog/blog_item_update.php';
 		break;
+	case preg_match('/\/blog\/(\w+)\/remove$/', $_SERVER['REQUEST_URI'], $post_data):
+		require LGC_DIR . 'blog/blog_item_remove.php';
+		break;
 	case preg_match('/\/blog\/new-post$/', $_SERVER['REQUEST_URI'], $post_data):
 		require LGC_DIR . 'blog/new.php';
 		break;

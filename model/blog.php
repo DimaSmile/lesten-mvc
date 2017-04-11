@@ -24,6 +24,11 @@ $create_blog_model = function() use ($conn){
 						return mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM posts WHERE id = {$id}")
 							);
 						},
+		'remove_post' => function($id) use($conn){
+						$id = addslashes($id);
+						return mysqli_fetch_assoc(mysqli_query($conn, "DELETE FROM posts WHERE id = {$id}")
+							);
+						},
 		'get_last_10_posts' => function() use($conn){
 						return mysqli_query($conn, "SELECT * FROM posts ORDER BY id DESC LIMIT 10"
 							);
